@@ -1,0 +1,417 @@
+/* Reset & 基本設定 */
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  line-height: 1.5;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.header a {
+  font-size: 28px;
+  font-weight: 700;
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 24px 20px;
+}
+
+.header a:hover {
+  color: gray;
+}
+
+/* Content 主要區塊 */
+.content {
+  display: flex;
+  margin: 0 auto;
+  align-items: stretch;
+  background: #FBFBFB;
+}
+
+.content img {
+  width: 50%;
+}
+
+/* Hero 區塊 */
+.hero {
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 80px;
+  overflow: hidden;
+}
+
+.hero h1 {
+  color: #0027D5;
+  font-size: 120px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.hero h2 {
+  color: #0027D5;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+/* 響應式 - Content & Hero */
+@media (max-width: 767px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .content img,
+  .content .hero {
+    width: 100%;
+  }
+
+  .content .hero {
+    padding: 24px 0 24px 24px;
+  }
+
+  .content .hero h1 {
+    font-size: 52px;
+  }
+}
+
+/* Banner 區塊 */
+.banner {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1920px;
+  align-items: center;
+  /* border: 1px solid #6C757D; */
+}
+
+.section1 {
+  padding-right: 24px;
+  flex: 1 1 50%;
+}
+
+.section1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.section2 {
+  padding-bottom: 8px;
+  flex: 1 1 50%;
+}
+
+/* 連結樣式 */
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* 文章 */
+.article {
+  max-width: 636px;
+  width: 100%;
+  font-size: 16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+/* 標題 */
+.title {
+  font-size: 28px;
+  padding-bottom: 8px;
+  max-width: 636px;
+  width: 100%;
+  height: 42px;
+}
+
+/* 新標籤 */
+.new {
+  font-size: 16px;
+  background: #0027D5;
+  color: #FFFFFF;
+  padding: 6px 12px;
+  border-radius: 40px;
+}
+
+/* 標籤文字 */
+.hashtag {
+  font-size: 24px;
+  padding-right: 8px;
+  display: inline-block;
+}
+
+/* 閱讀按鈕 */
+.read {
+  border: 1px solid #000000;
+  border-radius: 40px;
+  color: #000000;
+  font-size: 16px;
+  padding: 8px 16px;
+  width: 96px;
+}
+
+/* 時間文字 */
+.time {
+  font-size: 16px;
+}
+
+/* 項目容器 */
+.item {
+  display: flex;
+}
+
+/* 響應式 - Banner 區塊 */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    width: 100%;
+    max-width: 375px;
+  }
+  .section1 {
+    aspect-ratio: 1 / 1;
+    padding-right: 0;
+    width: 100%;
+  }
+  .section1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .section2 {
+    text-align: center;
+    width: 100%;
+    padding: 16px 0px;
+  }
+  .article {
+    max-width: 375px;
+  }
+}
+
+/* 搜尋框容器 */
+.search_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 30px 50px;
+}
+
+/* 搜尋圖示 */
+.search_icon {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+/* 搜尋框 */
+#box {
+  width: 100%;
+  padding: 10px 10px 10px 50px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* 主要容器 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* 卡片區塊排版（Grid） */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  max-width: 1200px;
+}
+
+.menu li {
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+/* 圖片 */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* 標題文字 */
+h3 {
+  color: #0027D5;
+}
+
+/* 按鈕 */
+button {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-top: 15px;
+  color: #000;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border: none;
+}
+
+/* 特定藍字ID */
+#blue {
+  color: #0027D5;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0px 10px;
+}
+
+/* 熱門文章按鈕 */
+#but_populararticle {
+  margin: 0 auto;
+  padding: 7px 10px;
+  background-color: #0027D5;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+}
+
+/* 分頁欄 */
+.footer {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 10px;
+}
+
+#one {
+  color: #0027D5;
+  font-weight: 600;
+}
+
+/* 文字按鈕容器 */
+.text_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 響應式 - 卡片 */
+@media screen and (max-width: 992px) {
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+    max-width: 100%;
+  }
+
+  .search_container {
+    flex-direction: column;
+    margin: 20px 10px;
+  }
+
+  #box {
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 50px;
+  }
+
+  .search_icon {
+    left: 20px;
+    top: 30px;
+  }
+
+  .text_button {
+    justify-content: flex-start;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  #but_populararticle {
+    margin: 0 10px;
+  }
+}
+
+/* 聯絡區塊 */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email {
+  width: 55%;
+  height: 48px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.social-box {
+  width: 236px;
+  height: 44px;
+}
+
+.social-img {
+  width: 44px;
+  height: 44px;
+}
+
+/* 頁尾 */
+.footer {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rights {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* 響應式 - 聯絡區塊隱藏 */
+@media (max-width: 768px) {
+  .contact {
+    display: none;
+  }
+}
